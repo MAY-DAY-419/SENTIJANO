@@ -7,9 +7,10 @@ CORS(app)
 
 emotion_pipeline = pipeline(
     "text-classification",
-    model="j-hartmann/emotion-english-distilroberta-base",
+    model="distilbert-base-uncased",
     return_all_scores=False
 )
+
 
 @app.route('/analyze', methods=['POST'])
 def analyze():
